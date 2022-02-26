@@ -24,6 +24,7 @@
     "monaco-editor": "^0.31.1",
     "ngx-monaco-editor": "^12.0.0",
     "rxjs": "~7.4.0",
+    "semver": "^7.3.5",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
