@@ -1,9 +1,8 @@
 <div [formGroup]="mainForm">
-  <ngx-monaco-editor
-    #monaco
+  <app-reactive-monaco
     [options]="options"
-    formControlName="monaco"
-  ></ngx-monaco-editor>
+    [form]="monaco"
+  ></app-reactive-monaco>
 
   is that dirty ? {{ mainForm.dirty }}
 </div>
