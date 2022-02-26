@@ -8,20 +8,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MonacoComponent } from './component/monaco/monaco.component';
 import { MonacoTab2Component } from './component/monaco-tab2/monaco-tab2.component';
 import { MatTabsModule } from '@angular/material/tabs';
-import { ReactiveMonacoComponent } from './component/reactive-monaco/reactive-monaco.component';
+import { MatButtonModule } from '@angular/material/button';
+
 const monacoConfig: NgxMonacoEditorConfig = {
-  // baseUrl: 'app-name/assets', // configure base path cotaining monaco-editor directory after build default: './assets'
-  defaultOptions: { theme: 'vs-dark', language: 'javascript' }, // pass default options to be used
-  // onMonacoLoad: () => { console.log((<any>window).monaco); } // here monaco object will be available as window.monaco use this function to extend monaco editor functionalities.
+  defaultOptions: { theme: 'vs-dark', language: 'javascript' },
 };
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MonacoComponent,
-    MonacoTab2Component,
-    ReactiveMonacoComponent,
-  ],
+  declarations: [AppComponent, MonacoComponent, MonacoTab2Component],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -29,6 +23,7 @@ const monacoConfig: NgxMonacoEditorConfig = {
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatTabsModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

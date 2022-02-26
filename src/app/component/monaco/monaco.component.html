@@ -1,8 +1,18 @@
 <div [formGroup]="mainForm">
-  <app-reactive-monaco
+  <ngx-monaco-editor
+    formControlName="monaco"
     [options]="options"
-    [form]="monaco"
-  ></app-reactive-monaco>
+  ></ngx-monaco-editor>
 
-  is that dirty ? {{ mainForm.dirty }}
+  <!-- is that dirty ? {{ mainForm.dirty }} -->
+  <span
+    ><button
+      mat-raised-button
+      color="primary"
+      [disabled]="!isFormDirty()"
+      (click)="submit()"
+    >
+      Submit
+    </button></span
+  >
 </div>
