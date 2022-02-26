@@ -1,10 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit { 
+ 
+  constructor(private fb : FormBuilder){
+    
+  }
+  ngOnInit(): void {
+      console.log((<any>window).monaco);
+      // this.obj = JSON.stringify(this.mainForm);
+  }
+  
   title = 'monaco';
+  
 }
