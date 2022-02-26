@@ -1,8 +1,8 @@
-<mat-tab-group>
-  <mat-tab label="tab 1">
-    <app-monaco *matTabContent></app-monaco>
+<mat-tab-group [selectedIndex]="2">
+  <mat-tab label="WORKING TAB">
+    <app-monaco [parent]="parentForm" *matTabContent></app-monaco>
   </mat-tab>
-  <mat-tab label="MONACO TAB 2"
-    ><app-monaco-tab2 *matTabContent></app-monaco-tab2
+  <mat-tab label="MONACO WITH NO BOOLEAN"
+    ><app-monaco-tab2 [parent]="parentForm" *matTabContent></app-monaco-tab2
   ></mat-tab>
 </mat-tab-group>

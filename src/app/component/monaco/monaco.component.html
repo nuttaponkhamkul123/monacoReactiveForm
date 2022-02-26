@@ -1,18 +1,27 @@
 <div [formGroup]="mainForm">
-  <ngx-monaco-editor
-    formControlName="monaco"
-    [options]="options"
-  ></ngx-monaco-editor>
-
-  <!-- is that dirty ? {{ mainForm.dirty }} -->
-  <span
-    ><button
-      mat-raised-button
-      color="primary"
-      [disabled]="!isFormDirty()"
-      (click)="submit()"
+  <div class="tab-containers">
+    <h2>Working lazy loading monaco</h2>
+    <h4>
+      <strong>Dirty : </strong
+      ><small [ngStyle]="{ color: isFormDirty() ? 'red' : 'green' }">{{
+        isFormDirty()
+      }}</small>
+    </h4>
+    <ngx-monaco-editor
+      formControlName="monaco"
+      [options]="options"
+    ></ngx-monaco-editor>
+    {{ mainForm.value | json }}
+    <!-- is that dirty ? {{ mainForm.dirty }} -->
+    <span
+      ><button
+        mat-raised-button
+        color="primary"
+        [disabled]="!isFormDirty()"
+        (click)="submit()"
+      >
+        Submit
+      </button></span
     >
-      Submit
-    </button></span
-  >
+  </div>
 </div>
