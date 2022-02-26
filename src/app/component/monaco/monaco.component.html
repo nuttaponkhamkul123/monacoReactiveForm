@@ -1,11 +1,9 @@
 <div [formGroup]="mainForm">
-  <div *ngIf="showing === true">
-    <ngx-monaco-editor
-      [options]="options"
-      formControlName="monaco"
-      (onInit)="onInit($event)"
-    ></ngx-monaco-editor>
-  </div>
+  <ngx-monaco-editor
+    #monaco
+    [options]="options"
+    formControlName="monaco"
+  ></ngx-monaco-editor>
 
-  {{ mainForm.dirty }}
+  is that dirty ? {{ mainForm.dirty }}
 </div>

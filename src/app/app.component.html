@@ -1,8 +1,8 @@
-<div>
-  <mat-tab-group mat-align-tabs="start">
-    <mat-tab label="tab 1"><app-monaco *matTabContent></app-monaco></mat-tab>
-    <mat-tab label="MONACO TAB 2"
-      ><app-monaco-tab2 *matTabContent></app-monaco-tab2
-    ></mat-tab>
-  </mat-tab-group>
-</div>
+<mat-tab-group [backgroundColor]="'accent'">
+  <mat-tab label="tab 1">
+    <app-monaco *matTabContent></app-monaco>
+  </mat-tab>
+  <mat-tab label="MONACO TAB 2"
+    ><app-monaco-tab2 *matTabContent></app-monaco-tab2
+  ></mat-tab>
+</mat-tab-group>
